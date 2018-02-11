@@ -1,0 +1,8 @@
+@import '../../variables/global.scss';
+.queue-spacer{
+  &.active{
+    background-color:$pts-purple;
+  }
+  height:100%;
+  width:20px;
+}

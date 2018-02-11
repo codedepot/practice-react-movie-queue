@@ -1,0 +1,63 @@
+.movie-queue-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #381919; }
+  .movie-queue-container .queue-header {
+    height: 30px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    padding-left: 20px; }
+    .movie-queue-container .queue-header .queue-status {
+      color: #ffc0c8;
+      display: inline; }
+    .movie-queue-container .queue-header .queue-view-btn {
+      position: absolute;
+      right: 0;
+      height: 30px;
+      background-color: #381919;
+      border: 0;
+      width: 40px;
+      color: #ffc0c8; }
+      .movie-queue-container .queue-header .queue-view-btn:hover, .movie-queue-container .queue-header .queue-view-btn:active, .movie-queue-container .queue-header .queue-view-btn:focus {
+        background-color: #f24747;
+        color: #381919; }
+  .movie-queue-container .scroll-btn {
+    position: absolute;
+    top: 30px;
+    background-color: #4e2323;
+    width: 20px;
+    border: 0;
+    height: 100%; }
+    .movie-queue-container .scroll-btn i {
+      color: #ffc0c8; }
+    .movie-queue-container .scroll-btn.left {
+      left: 0; }
+    .movie-queue-container .scroll-btn.right {
+      right: 0; }
+    .movie-queue-container .scroll-btn:hover, .movie-queue-container .scroll-btn:active, .movie-queue-container .scroll-btn:focus {
+      background-color: #f24747;
+      color: #381919; }
+  .movie-queue-container .queue-list-wrapper {
+    overflow: hidden;
+    margin: 0 20px;
+    height: 200px;
+    transition: height 0.5s; }
+    .movie-queue-container .queue-list-wrapper ul.queue-list {
+      list-style-type: none;
+      margin: 0;
+      display: flex;
+      overflow: visible;
+      padding: 0;
+      transition: transform 0.5s; }
+      .movie-queue-container .queue-list-wrapper ul.queue-list > li {
+        display: flex; }
+      .movie-queue-container .queue-list-wrapper ul.queue-list::-webkit-scrollbar {
+        width: 0;
+        height: 0; }
+      .movie-queue-container .queue-list-wrapper ul.queue-list img {
+        width: 100px;
+        height: 150px; }
+  .movie-queue-container.collapse .queue-list-wrapper {
+    height: 0; }

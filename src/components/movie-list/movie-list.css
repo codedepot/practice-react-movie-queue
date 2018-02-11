@@ -1,0 +1,45 @@
+.movie-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 0; }
+  .movie-list li {
+    display: inline-block;
+    margin: 20px 10px;
+    display: flex;
+    flex-direction: column; }
+    .movie-list li .poster-container {
+      position: relative;
+      height: 300px; }
+      .movie-list li .poster-container img {
+        width: 200px;
+        height: 300px; }
+      .movie-list li .poster-container .controls-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        background-color: rgba(156, 156, 156, 0.2); }
+        .movie-list li .poster-container .controls-container .controls-wrapper {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          padding: 5px;
+          border-radius: 5px; }
+          .movie-list li .poster-container .controls-container .controls-wrapper button {
+            background-color: transparent;
+            border: 0; }
+            .movie-list li .poster-container .controls-container .controls-wrapper button i {
+              color: #f24747;
+              font-size: 24px; }
+    .movie-list li.active {
+      transform: scale(1.05);
+      transition: transform 0.25s; }
+      .movie-list li.active .poster-container .controls-container {
+        opacity: 1;
+        transition: transform 0.25s; }

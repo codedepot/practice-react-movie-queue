@@ -1,0 +1,88 @@
+@import '../../variables/global.scss';
+
+.movie-queue-container{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background-color: $pts-dark;
+  .queue-header{
+    height:$queue-collapse-height;
+    text-align: left;
+    display:flex;
+    align-items:center;
+    padding-left: $text-padding;
+    .queue-status{
+      color:$pts-grey;
+      display:inline;
+    }
+    .queue-view-btn{
+      position: absolute;
+      right:0;
+      height:$queue-collapse-height;
+      background-color:$pts-dark;
+      border:0;
+      width:40px;
+      color:$pts-grey;
+      &:hover, &:active, &:focus{
+        background-color:$pts-purple;
+        color:$pts-dark;
+      }
+  
+  
+    }
+  }
+
+  .scroll-btn{
+    position:absolute;
+    top:$queue-collapse-height;
+    background-color:$pts-accent-dark;
+    width:20px;
+    border:0;
+    height: 100%;
+    i{
+      color:$pts-grey;
+    }
+    &.left{
+      left:0;
+    }
+    &.right{
+      right:0;
+    }
+    &:hover, &:active, &:focus{
+      background-color:$pts-purple;
+      color:$pts-dark;
+    }
+  }
+
+  .queue-list-wrapper{
+    overflow:hidden;
+    margin:0 20px;
+    height:200px;
+    transition: height 0.5s;
+    ul.queue-list{
+      list-style-type: none;
+      margin:0;
+      display:flex;
+      overflow:visible;
+      padding:0; 
+      transition:transform 0.5s;
+      > li{
+        display:flex;
+      }
+      &::-webkit-scrollbar {
+        width:0;
+        height:0;
+      }
+      img{
+        width:100px;
+        height:150px;
+      }
+    }
+  }
+
+  &.collapse .queue-list-wrapper{
+    height:0;
+  }
+
+} 
+ 

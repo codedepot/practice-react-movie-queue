@@ -1,0 +1,63 @@
+@import '../../variables/global.scss';
+.header-container{
+  position:fixed;
+  z-index: 5;
+  width:100%;
+  top:0;
+  background-color:$pts-dark;
+  color:$pts-grey;
+  text-align: left;
+  .header-status{
+    height:$header-collapse-height;
+    padding:0 $text-padding;
+    display:flex;
+    flex-direction: column;
+    height:$header-collapse-height;
+    justify-content: center;
+    margin-bottom: 5px;
+    .title{
+      display:inline;
+      font-size:20px;
+
+    }
+  }
+  .header-info{
+    position: relative;
+    height:60px;
+    transition:height 0.25s;
+    overflow: hidden;
+    @include breakpoint(xs) {
+      height:85px;
+    }
+    .close-btn{
+      position: absolute;
+      right:0;
+      bottom:0;
+      color:$pts-grey;
+      background-color:$pts-dark;
+      border:0;
+      font-size: 20px;
+      &:hover, &:focus, &:active{
+        background-color:$pts-purple;
+        color:$pts-dark;
+      }
+    }
+    .info-wrapper{
+      padding: 0 $text-padding;
+      display:flex;
+      flex-direction: column;
+      .row{
+        margin-top:5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &.mar-bottom-10{
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  &.collapse .header-info{
+    height:0;
+  }
+}

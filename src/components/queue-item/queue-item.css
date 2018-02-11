@@ -1,0 +1,17 @@
+.item-container {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0; }
+  .item-container img {
+    width: 100px;
+    height: 150px;
+    cursor: move; }
+  .item-container .controls-wrapper button {
+    border: 0;
+    background: #4e2323;
+    color: #ffc0c8;
+    width: 33px;
+    height: 20px; }
+    .item-container .controls-wrapper button:hover, .item-container .controls-wrapper button:active, .item-container .controls-wrapper button:focus {
+      background-color: #f24747;
+      color: #381919; }
