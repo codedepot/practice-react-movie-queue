@@ -2,7 +2,7 @@
 This is a netflix style movie queue made from the starter kit from react: (https://github.com/facebookincubator/create-react-app) 
 This was a solution to a programming challenge focused on React
 
-Live Demo: https://moviequeue-45d73.firebaseapp.com/ 
+Live Demo: https://moviequeue-45d73.web.app/
 
 
 The solution is built with react; features an info header and queue menu which open/collapse. 
